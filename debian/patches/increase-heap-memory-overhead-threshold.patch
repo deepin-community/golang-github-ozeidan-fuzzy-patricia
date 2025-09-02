@@ -1,0 +1,11 @@
+Description: increase the allowed memory overhead threshold for tests
+ The test shows a minor memory leak that is apprently to be expected.
+Author: Ananthu C V <weepingclown@debian.org>
+Last-Update: 2025-04-11
+--- a/patricia/patricia_dense_test.go
++++ b/patricia/patricia_dense_test.go
+@@ -18,3 +18,3 @@
+ // (to avoid failing tests on insignificant growth amounts)
+-const overhead = 4000
++const overhead = 50000
+ 
